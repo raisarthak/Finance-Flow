@@ -62,7 +62,7 @@ export default function RecentTransactions({ transactions = [] }) {
               </div>
               <div style={{ textAlign: 'right' }}>
                 <div className={`transaction-amount ${tx.type}`}>
-                  {tx.type === 'income' ? '+' : '-'}${tx.amount.toLocaleString()}
+                  {tx.type === 'income' ? '+' : '-'}₹{tx.amount.toLocaleString()}
                 </div>
                 <div className="transaction-date">{formatDate(tx.date)}</div>
               </div>

@@ -83,19 +83,19 @@ export default function ReportsPage() {
           <div className="kpi-card green animate-in">
             <span className="kpi-card-label">Avg Monthly Income</span>
             <div className="kpi-card-value">
-              ${(charts.savingsData.reduce((s, d) => s + d.income, 0) / charts.savingsData.length || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}
+              ₹{(charts.savingsData.reduce((s, d) => s + d.income, 0) / charts.savingsData.length || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}
             </div>
           </div>
           <div className="kpi-card red animate-in">
             <span className="kpi-card-label">Avg Monthly Expenses</span>
             <div className="kpi-card-value">
-              ${(charts.savingsData.reduce((s, d) => s + d.expenses, 0) / charts.savingsData.length || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}
+              ₹{(charts.savingsData.reduce((s, d) => s + d.expenses, 0) / charts.savingsData.length || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}
             </div>
           </div>
           <div className="kpi-card primary animate-in">
             <span className="kpi-card-label">Avg Monthly Savings</span>
             <div className="kpi-card-value">
-              ${(charts.savingsData.reduce((s, d) => s + d.savings, 0) / charts.savingsData.length || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}
+              ₹{(charts.savingsData.reduce((s, d) => s + d.savings, 0) / charts.savingsData.length || 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}
             </div>
           </div>
         </div>

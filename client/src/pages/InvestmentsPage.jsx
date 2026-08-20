@@ -123,16 +123,16 @@ export default function InvestmentsPage() {
           <div className="kpi-grid">
             <div className="kpi-card blue animate-in">
               <span className="kpi-card-label">Total Invested</span>
-              <div className="kpi-card-value">${portfolio.totalInvested?.toLocaleString()}</div>
+              <div className="kpi-card-value">₹{portfolio.totalInvested?.toLocaleString()}</div>
             </div>
             <div className="kpi-card green animate-in">
               <span className="kpi-card-label">Current Value</span>
-              <div className="kpi-card-value">${portfolio.currentValue?.toLocaleString()}</div>
+              <div className="kpi-card-value">₹{portfolio.currentValue?.toLocaleString()}</div>
             </div>
             <div className={`kpi-card ${portfolio.totalProfitLoss >= 0 ? 'green' : 'red'} animate-in`}>
               <span className="kpi-card-label">Total P&L</span>
               <div className="kpi-card-value" style={{ color: portfolio.totalProfitLoss >= 0 ? 'var(--accent-green)' : 'var(--accent-red)' }}>
-                {portfolio.totalProfitLoss >= 0 ? '+' : ''}${portfolio.totalProfitLoss?.toLocaleString()}
+                {portfolio.totalProfitLoss >= 0 ? '+' : ''}₹{portfolio.totalProfitLoss?.toLocaleString()}
               </div>
             </div>
             <div className="kpi-card amber animate-in">
@@ -153,7 +153,7 @@ export default function InvestmentsPage() {
                   <Pie data={allocationData} cx="50%" cy="50%" innerRadius={60} outerRadius={100} paddingAngle={3} dataKey="value" stroke="none">
                     {allocationData.map((entry, i) => <Cell key={i} fill={entry.fill} />)}
                   </Pie>
-                  <Tooltip formatter={(v) => `$${v.toLocaleString()}`} />
+                  <Tooltip formatter={(v) => `₹${v.toLocaleString()}`} />
                   <Legend layout="vertical" align="right" verticalAlign="middle" iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11 }} />
                 </PieChart>
               </ResponsiveContainer>
@@ -194,14 +194,14 @@ export default function InvestmentsPage() {
                         </td>
                         <td><Badge variant={inv.type}>{TYPE_LABELS[inv.type]}</Badge></td>
                         <td style={{ textAlign: 'right' }}>{inv.quantity}</td>
-                        <td style={{ textAlign: 'right' }}>${inv.purchasePrice.toLocaleString()}</td>
-                        <td style={{ textAlign: 'right' }}>${inv.currentPrice.toLocaleString()}</td>
-                        <td style={{ textAlign: 'right' }}>${invested.toLocaleString()}</td>
-                        <td style={{ textAlign: 'right', fontWeight: 600 }}>${current.toLocaleString()}</td>
+                        <td style={{ textAlign: 'right' }}>₹{inv.purchasePrice.toLocaleString()}</td>
+                        <td style={{ textAlign: 'right' }}>₹{inv.currentPrice.toLocaleString()}</td>
+                        <td style={{ textAlign: 'right' }}>₹{invested.toLocaleString()}</td>
+                        <td style={{ textAlign: 'right', fontWeight: 600 }}>₹{current.toLocaleString()}</td>
                         <td style={{ textAlign: 'right' }}>
                           <div className={`flex items-center gap-2 ${pl >= 0 ? 'text-green' : 'text-red'}`} style={{ justifyContent: 'flex-end', fontWeight: 600 }}>
                             {pl >= 0 ? <TrendingUp size={14} /> : <TrendingDown size={14} />}
-                            {pl >= 0 ? '+' : ''}${pl.toLocaleString()} ({plPercent.toFixed(1)}%)
+                            {pl >= 0 ? '+' : ''}₹{pl.toLocaleString()} ({plPercent.toFixed(1)}%)
                           </div>
                         </td>
                         <td style={{ textAlign: 'right' }}>

@@ -70,19 +70,19 @@ export default function DashboardPage() {
           <div className="hero-stat">
             <span className="hero-stat-label">Net Worth</span>
             <span className="hero-stat-value" style={{ color: 'var(--accent-primary-light)' }}>
-              ${summary?.netWorth?.toLocaleString() || '0'}
+              ₹{summary?.netWorth?.toLocaleString() || '0'}
             </span>
           </div>
           <div className="hero-stat">
             <span className="hero-stat-label">This Month</span>
             <span className="hero-stat-value text-green">
-              +${summary?.monthlyIncome?.toLocaleString() || '0'}
+              +₹{summary?.monthlyIncome?.toLocaleString() || '0'}
             </span>
           </div>
           <div className="hero-stat">
             <span className="hero-stat-label">Spent</span>
             <span className="hero-stat-value text-red">
-              -${summary?.monthlyExpenses?.toLocaleString() || '0'}
+              -₹{summary?.monthlyExpenses?.toLocaleString() || '0'}
             </span>
           </div>
           <div className="hero-stat">

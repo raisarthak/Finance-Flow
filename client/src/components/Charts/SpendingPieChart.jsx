@@ -9,7 +9,7 @@ function CustomTooltip({ active, payload }) {
     <div className="chart-tooltip">
       <div className="chart-tooltip-item">
         <span className="chart-tooltip-dot" style={{ background: payload[0].payload.fill }} />
-        {name}: ${value?.toLocaleString()}
+        {name}: ₹{value?.toLocaleString()}
       </div>
     </div>
   );

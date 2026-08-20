@@ -117,15 +117,15 @@ export default function BudgetPage() {
           <div className="kpi-grid" style={{ marginBottom: 24 }}>
             <div className="kpi-card green animate-in">
               <span className="kpi-card-label">Total Budget</span>
-              <div className="kpi-card-value">${totalLimit.toLocaleString()}</div>
+              <div className="kpi-card-value">₹{totalLimit.toLocaleString()}</div>
             </div>
             <div className="kpi-card red animate-in">
               <span className="kpi-card-label">Total Spent</span>
-              <div className="kpi-card-value">${totalSpent.toLocaleString()}</div>
+              <div className="kpi-card-value">₹{totalSpent.toLocaleString()}</div>
             </div>
             <div className="kpi-card amber animate-in">
               <span className="kpi-card-label">Remaining</span>
-              <div className="kpi-card-value">${Math.max(totalLimit - totalSpent, 0).toLocaleString()}</div>
+              <div className="kpi-card-value">₹{Math.max(totalLimit - totalSpent, 0).toLocaleString()}</div>
             </div>
             <div className="kpi-card primary animate-in">
               <span className="kpi-card-label">Usage</span>
@@ -150,9 +150,9 @@ export default function BudgetPage() {
                       </div>
                       <div className="budget-item-amounts">
                         <span style={{ color: isOver ? 'var(--accent-red)' : 'var(--text-primary)' }}>
-                          ${(cat.spent || 0).toLocaleString()}
+                          ₹{(cat.spent || 0).toLocaleString()}
                         </span>
-                        {' / $'}{cat.limit.toLocaleString()}
+                        {' / ₹'}{cat.limit.toLocaleString()}
                         <span style={{ marginLeft: 8, fontSize: 11, color: isOver ? 'var(--accent-red)' : 'var(--text-muted)' }}>
                           ({percent.toFixed(0)}%)
                         </span>
@@ -189,7 +189,7 @@ export default function BudgetPage() {
       >
         <form onSubmit={handleCreateBudget}>
           <p className="text-muted mb-4" style={{ fontSize: 13 }}>
-            Set spending limits for each category. Total: $
+            Set spending limits for each category. Total: ₹
             {categories.reduce((s, c) => s + (parseFloat(c.limit) || 0), 0).toLocaleString()}
           </p>
           {categories.map((cat, i) => (

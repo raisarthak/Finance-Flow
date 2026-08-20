@@ -8,7 +8,7 @@ function CustomTooltip({ active, payload, label }) {
       {payload.map((entry, i) => (
         <div className="chart-tooltip-item" key={i}>
           <span className="chart-tooltip-dot" style={{ background: entry.color }} />
-          {entry.name}: ${entry.value?.toLocaleString()}
+          {entry.name}: ₹{entry.value?.toLocaleString()}
         </div>
       ))}
     </div>
@@ -29,7 +29,7 @@ export default function SavingsTrendChart({ data = [] }) {
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
           <XAxis dataKey="month" tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false} />
-          <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={v => `$${(v/1000).toFixed(0)}K`} />
+          <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={v => `₹${(v/1000).toFixed(0)}K`} />
           <Tooltip content={<CustomTooltip />} />
           <Area type="monotone" dataKey="savings" name="Savings" stroke="#10b981" strokeWidth={2} fill="url(#savingsGradient)" />
         </AreaChart>

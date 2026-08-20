@@ -174,20 +174,20 @@ export default function TransactionsPage() {
           <div className="inline-stat">
             <div className="inline-stat-dot" style={{ background: 'var(--accent-green)' }} />
             <span className="inline-stat-label">Income</span>
-            <span className="inline-stat-value text-green">+${totalIncome.toLocaleString()}</span>
+                <span className="inline-stat-value text-green">+₹{totalIncome.toLocaleString()}</span>
           </div>
           <div className="inline-stat-divider" />
           <div className="inline-stat">
             <div className="inline-stat-dot" style={{ background: 'var(--accent-red)' }} />
             <span className="inline-stat-label">Expenses</span>
-            <span className="inline-stat-value text-red">-${totalExpense.toLocaleString()}</span>
+                <span className="inline-stat-value text-red">-₹{totalExpense.toLocaleString()}</span>
           </div>
           <div className="inline-stat-divider" />
           <div className="inline-stat">
             <div className="inline-stat-dot" style={{ background: netAmount >= 0 ? 'var(--accent-green)' : 'var(--accent-red)' }} />
             <span className="inline-stat-label">Net</span>
             <span className={`inline-stat-value ${netAmount >= 0 ? 'text-green' : 'text-red'}`}>
-              {netAmount >= 0 ? '+' : '-'}${Math.abs(netAmount).toLocaleString()}
+              {netAmount >= 0 ? '+' : '-'}₹{Math.abs(netAmount).toLocaleString()}
             </span>
           </div>
         </div>
@@ -224,7 +224,7 @@ export default function TransactionsPage() {
                     <td><Badge variant={tx.type}>{tx.type}</Badge></td>
                     <td style={{ textAlign: 'right' }}>
                       <span className={`font-bold ${tx.type === 'income' ? 'text-green' : 'text-red'}`}>
-                        {tx.type === 'income' ? '+' : '-'}${tx.amount.toLocaleString()}
+                        {tx.type === 'income' ? '+' : '-'}₹{tx.amount.toLocaleString()}
                       </span>
                     </td>
                     <td style={{ textAlign: 'right' }}>

@@ -23,7 +23,7 @@ function useCountUp(end, duration = 1000) {
   return value;
 }
 
-export default function KPICard({ label, value, prefix = '$', trend, trendLabel, icon: Icon, variant = 'primary' }) {
+export default function KPICard({ label, value, prefix = '₹', trend, trendLabel, icon: Icon, variant = 'primary' }) {
   const numericValue = typeof value === 'number' ? value : parseFloat(value) || 0;
   const animated = useCountUp(Math.abs(numericValue));
   const isNegative = numericValue < 0;

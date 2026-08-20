@@ -84,7 +84,7 @@ export default function AccountsPage() {
         <div>
           <h1 className="page-title">Accounts</h1>
           <p className="page-subtitle">
-            {accounts.length} accounts · Total Balance: ${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+            {accounts.length} accounts · Total Balance: ₹{totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2 })}
           </p>
         </div>
         <Button icon={Plus} onClick={openCreate}>Add Account</Button>
@@ -108,7 +108,7 @@ export default function AccountsPage() {
                 </div>
               </div>
               <div className="account-card-balance" style={{ color: acc.balance < 0 ? 'var(--accent-red)' : 'var(--text-primary)' }}>
-                {acc.balance < 0 ? '-' : ''}${Math.abs(acc.balance).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                {acc.balance < 0 ? '-' : ''}₹{Math.abs(acc.balance).toLocaleString(undefined, { minimumFractionDigits: 2 })}
               </div>
               <div className="account-card-footer">
                 <Badge variant={acc.type}>{acc.type}</Badge>

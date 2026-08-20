@@ -18,7 +18,7 @@ function CustomTooltip({ active, payload, label }) {
       {payload.map((entry, i) => (
         <div className="chart-tooltip-item" key={i}>
           <span className="chart-tooltip-dot" style={{ background: entry.color }} />
-          {entry.name}: ${entry.value?.toLocaleString()}
+          {entry.name}: ₹{entry.value?.toLocaleString()}
         </div>
       ))}
     </div>
@@ -40,7 +40,7 @@ export default function InvestmentGrowthChart({ investments = [] }) {
         <LineChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
           <XAxis dataKey="name" tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false} />
-          <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={v => `$${(v/1000).toFixed(0)}K`} />
+          <YAxis tick={{ fill: 'var(--text-muted)', fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={v => `₹${(v/1000).toFixed(0)}K`} />
           <Tooltip content={<CustomTooltip />} />
           <Legend wrapperStyle={{ fontSize: 12 }} />
           <Line type="monotone" dataKey="invested" name="Invested" stroke="#6366f1" strokeWidth={2} dot={{ r: 4, fill: '#6366f1' }} />

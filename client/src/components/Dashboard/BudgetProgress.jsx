@@ -10,7 +10,7 @@ export default function BudgetProgress({ budget }) {
       <div className="card-header">
         <h3 className="card-title">Budget Overview</h3>
         <span className="text-muted" style={{ fontSize: 12 }}>
-          ${totalSpent.toLocaleString()} / ${totalLimit.toLocaleString()}
+          ₹{totalSpent.toLocaleString()} / ₹{totalLimit.toLocaleString()}
         </span>
       </div>
 
@@ -24,7 +24,7 @@ export default function BudgetProgress({ budget }) {
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>{overallPercent.toFixed(0)}% used</span>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-            ${Math.max(totalLimit - totalSpent, 0).toLocaleString()} remaining
+            ₹{Math.max(totalLimit - totalSpent, 0).toLocaleString()} remaining
           </span>
         </div>
       </div>
@@ -42,9 +42,9 @@ export default function BudgetProgress({ budget }) {
               </div>
               <div className="budget-item-amounts">
                 <span style={{ color: isOver ? 'var(--accent-red)' : 'var(--text-primary)' }}>
-                  ${(cat.spent || 0).toLocaleString()}
+                  ₹{(cat.spent || 0).toLocaleString()}
                 </span>{' '}
-                / ${cat.limit.toLocaleString()}
+                / ₹{cat.limit.toLocaleString()}
               </div>
             </div>
             <div className="progress-bar" style={{ height: 6 }}>
