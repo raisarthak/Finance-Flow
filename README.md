@@ -2,6 +2,11 @@
 
 An enterprise-grade full-stack web application to manage bank accounts, track spending, monitor investments, create budgets, and analyze financial health from one beautiful dashboard.
 
+## 🚀 Live Demo
+
+[![Live Demo](https://webfinanceflow.vercel.app/)
+
+
 ## 🚀 Features
 
 - **📊 Financial Dashboard** — KPI cards with animated counters, interactive charts, budget overview
@@ -102,9 +107,6 @@ NODE_ENV=development
 - **Typography**: Inter font with modular scale
 - **Animations**: Fade-in, count-up KPIs, hover lifts, slide-in modals
 
-
-## Live Demo
-**Link** : https://webfinanceflow.vercel.app/
 
 
 ## 📜 License
