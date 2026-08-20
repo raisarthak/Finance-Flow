@@ -3,8 +3,7 @@
 An enterprise-grade full-stack web application to manage bank accounts, track spending, monitor investments, create budgets, and analyze financial health from one beautiful dashboard.
 
 ## 🚀 Live Demo
-
-[![Live Demo](https://webfinanceflow.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Website-success?style=for-the-badge)](https://webfinanceflow.vercel.app/)
 
 
 ## 🚀 Features
