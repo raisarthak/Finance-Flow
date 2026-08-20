@@ -1,0 +1,19 @@
+{
+  "name": "finance-dashboard-server",
+  "version": "1.0.0",
+  "description": "Finance Dashboard API Server",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "seed": "node utils/seedData.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-validator": "^7.2.1",
+    "mongodb-memory-server": "^11.2.0",
+    "mongoose": "^8.9.5"
+  }
+}
