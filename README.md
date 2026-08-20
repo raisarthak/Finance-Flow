@@ -102,10 +102,12 @@ NODE_ENV=development
 - **Typography**: Inter font with modular scale
 - **Animations**: Fade-in, count-up KPIs, hover lifts, slide-in modals
 
-## 📜 License
 
 ## Live Demo
-**Link**  : https://webfinanceflow.vercel.app/
+**Link** : https://webfinanceflow.vercel.app/
 
+
+## 📜 License
 MIT
-"# FInanceFlow" 
+"# FInanceFlow"
+ 
